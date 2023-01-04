@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
 import useStyles from "../utils/style";
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   const classes = useStyles();
   return (
     <div>
@@ -16,6 +16,9 @@ const Layout = ({ children }) => {
           <Link href={"/"}>
             <Typography className={classes.brand}>Shopholic</Typography>
           </Link>
+          <div className={classes.grow}></div>
+          <Link href={"/cart"}>Cart</Link>
+          <Link href={"/login"}>Login</Link>
         </Toolbar>
       </AppBar>
       <Container className={classes.main}>{children}</Container>
